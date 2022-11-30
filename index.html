@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual assistiremos?</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#anime").click(function(){
+                    $(".animes").slideToggle("slow");
+                    $(".filmes").slideUp("slow");
+
+                    // document.querySelector('#checkAnimes').checked = true;
+                    // document.querySelector('#checkFilmes').checked = false;
+            
+
+            });
+        });
+
+        $(document).ready(function(){
+            $("#filme").click(function(){
+                    $(".filmes").slideToggle("slow");
+                    $(".animes").slideUp("slow");
+
+                    // document.querySelector('#checkFilmes').checked = true;
+                    // document.querySelector('#checkAnimes').checked = false;
+
+
+
+            });
+        });
+
+    </script>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+        section {
+            font-family: 'Secular One', sans-serif;
+            background-color: #fcfcfc;
+            display: flex;
+            justify-content: center;
+            width: 70%;
+            flex-flow: column;
+            align-items: center;
+            margin: 0 auto;
+            height: 80vh;
+        }
+
+        .escolha {
+            display: flex;
+            flex-flow: column-reverse;
+            width: 50%;
+            height: 22vh;
+            justify-content: space-between;
+        }
+
+        .tituloSite {
+            display: flex;
+            padding: 10%;
+            font-size: 3.4em;
+            justify-content: center;
+        }
+
+        p{
+            text-align: center;
+        }
+
+        .escolhido{
+            margin: 0 auto;
+        }
+
+        #anime {
+            display: flex;
+            color: #fff;
+            background-color: #000;
+            align-items: center;
+            width: 50%;
+            justify-content: center;
+            height: 5vh;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+            padding: 0.5em 0;
+            cursor: pointer;
+            border: 2px solid black;
+
+        }
+
+        #anime:hover {
+            color: #000 !important;
+            background-color: transparent;
+            text-shadow: nthree;
+        }
+
+        #anime:hover:before {
+            left: 0%;
+            right: auto;
+            width: 100%;
+        }
+
+        #anime:before {
+            display: block;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            height: 100%;
+            width: 0px;
+            z-index: -1;
+            content: '';
+            color: #000 !important;
+            background: red;
+            transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+        }
+
+
+
+
+        #filme {
+            display: flex;
+            color: #fff;
+            background-color: #000;
+            align-items: center;
+            justify-content: center;
+            height: 5vh;
+            position: relative;
+            width: 50%;
+
+            border: 2px solid transparent;
+            transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+            padding: 0.5em 0;
+            cursor: pointer;
+            border: 2px solid black;
+
+        }
+
+        #filme:hover {
+            color: #000 !important;
+            background-color: transparent;
+            text-shadow: nthree;
+        }
+
+        #filme:hover:before {
+            left: 0%;
+            right: auto;
+            width: 100%;
+        }
+
+        #filme:before {
+            display: block;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            height: 100%;
+            width: 0px;
+            z-index: -1;
+            content: '';
+            color: #000 !important;
+            background: red;
+            transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+        }
+
+        .animes, .filmes{
+            font-family: 'Courier Prime', monospace;
+            display: none;
+            justify-content: center;
+            width: 45%;
+            margin: 0 auto;
+        }
+
+        .listaAnimes{
+            display: flex;
+            flex-flow: column;
+
+        }
+
+        @media only screen and (max-width: 1000px) {
+            #filme {
+                width: 110%;
+            }
+
+            #anime {
+                width: 110%;
+            }
+
+            .animes, .filmes{
+            font-family: 'Courier Prime', monospace;
+            display: none;
+            justify-content: center;
+            width: 80%;
+            margin: 0 auto;
+        }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div class="tituloSite">
+            Ordem dos filmes e séries
+        </div>
+
+        <div class="escolha">
+            <div class="escolhido animation"  id="anime">Animes</div>
+            <div class="escolhido animation"  id="filme">Filmes/Doramas</div>
+        </div>
+    </section>
+
+    <div class="animes">
+        <div class="listaAnimes">
+            <p><strong>Animes: </strong></p>
+
+            <p>1......................Given</p>
+            <p>2....................Kimetsu</p>
+            <p>3...............Cherry magic</p>
+            <p>4.....Tonari no kaibutsu-kun</p>
+            <p>5..................Haikyuu!!</p>
+            <p>6.............Mob psycho 100</p>
+            <p>7.......Kaichou wa maid-sama</p>
+            <p>8.....................Naruto</p>
+        </div>
+    </div>
+
+    <div class="filmes">
+        <div class="listaAnimes">
+            <p><strong>Filmes/Doramas: </strong></p>
+
+            <p>1.............Kieta hatsukoi</p>
+            <p>2............Gigantes de aço</p>
+            <p>3........Bastardos inglórios</p>
+            <p>4.............Tempo de matar</p>
+            <p>5................Tenki no ko</p>
+            <p>6............O Clube da luta</p>
+            <p>7...............Premonição 1</p>
+            <p>8..........O Poderoso chefão</p>
+            <p>9...............Premonição 2</p>
+            <p>10.........O Castelo animado</p>
+            <p>11..............Premonição 3</p>
+            <p>12..............Premonição 5</p>
+        </div>
+    </div>
+
+    <!-- "Bachira", aceitas ?
+    e pq vc está olhando aqui? -->
+    
+
+</body>
+
+</html>
